@@ -1,8 +1,12 @@
-import classes from "./headercartbutton.module.css";
+import { useContext } from "react";
 
+import classes from "./headercartbutton.module.css";
+import CartContext from "../../store/cart-context"
 import CartIcon from "../Cart/CartIcon";
 
 const HeaderCartButton=(props)=>{
+
+    const cartCtx = useContext(CartContext);
 
     return <button className={classes.button} onClick={props.onClick}>
         <span className={classes.icon}><CartIcon /></span>
